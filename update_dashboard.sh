@@ -12,7 +12,7 @@ git pull --rebase origin main
 source venv/bin/activate
 
 # Generate the dashboard
-./generate_dashboard.py
+/home/abby/observability/generate_dashboard.py
 
 # Stage changes if any
 git add index.html
