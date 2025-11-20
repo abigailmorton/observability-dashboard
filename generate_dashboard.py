@@ -20,7 +20,7 @@ def main():
     )
 
     # Write to file
-    output_path = "dashboard.html"
+    output_path = "index.html"
     with open(output_path, "w", encoding="utf-8") as f:
         f.write(rendered)
 
