@@ -1,4 +1,7 @@
+#!/usr/bin/env python3
+
 from datetime import datetime
+from zoneinfo import ZoneInfo
 from jinja2 import Environment, FileSystemLoader
 from data_sources.markets import fetch_markets
 from data_sources.system import get_system_stats
@@ -12,9 +15,12 @@ def main():
     env = Environment(loader=FileSystemLoader("."))
     template = env.get_template("template.html")
 
+    # Local time in US Eastern
+    local_now = datetime.now(ZoneInfo("America/New_York"))
+
     # Render template
     rendered = template.render(
-        generated_at=datetime.now().strftime("%Y-%m-%d %H:%M:%S"),
+        generated_at=local_now.strftime("%Y-%m-%d %H:%M:%S %Z"),
         markets=markets,
         system=system,
     )
@@ -28,3 +34,4 @@ def main():
 
 if __name__ == "__main__":
     main()
+
