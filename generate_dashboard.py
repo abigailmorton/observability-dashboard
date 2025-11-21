@@ -16,7 +16,7 @@ def main():
     template = env.get_template("template.html")
 
     # Local time in US Eastern
-    local_now = datetime.now(ZoneInfo("America/New_York"))
+    local_now = datetime.now(ZoneInfo("America/Chicago"))
 
     # Render template
     rendered = template.render(
