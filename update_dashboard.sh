@@ -4,7 +4,7 @@ set -e
 
 echo -e ''\n''
 
-echo (date +"%Y-%m-%d %H:%M:%S.%3N")
+echo "$(date +"%Y-%m-%d %H:%M:%S.%3N")"
 
 # Move to this script’s directory (so cron works anywhere)
 cd "$(dirname "$0")"
