@@ -2,7 +2,7 @@
 
 set -e
 
-echo -e ''\n''
+echo
 
 echo "$(date +"%Y-%m-%d %H:%M:%S.%3N")"
 
